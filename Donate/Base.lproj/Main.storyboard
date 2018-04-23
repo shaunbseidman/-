@@ -32,7 +32,14 @@
                             <outlet property="delegate" destination="rl2-uv-9Q8" id="WGL-Ye-Pj2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Donate" id="ubc-sA-Nlb"/>
+                    <navigationItem key="navigationItem" title="Donate" id="ubc-sA-Nlb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ok9-FK-w1u">
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="rl2-uv-9Q8" id="cpF-Dt-6jW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IC-qZ-eie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
