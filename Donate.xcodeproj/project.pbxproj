@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49F4AF86208E6A9200008BFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4AF85208E6A9200008BFD /* AppDelegate.swift */; };
-		49F4AF88208E6A9200008BFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4AF87208E6A9200008BFD /* ViewController.swift */; };
+		49F4AF88208E6A9200008BFD /* donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4AF87208E6A9200008BFD /* donate.swift */; };
 		49F4AF8B208E6A9200008BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F4AF89208E6A9200008BFD /* Main.storyboard */; };
 		49F4AF8D208E6A9200008BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F4AF8C208E6A9200008BFD /* Assets.xcassets */; };
 		49F4AF90208E6A9200008BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F4AF8E208E6A9200008BFD /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		49F4AF82208E6A9200008BFD /* Donate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F4AF85208E6A9200008BFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49F4AF87208E6A9200008BFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49F4AF87208E6A9200008BFD /* donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donate.swift; sourceTree = "<group>"; };
 		49F4AF8A208E6A9200008BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49F4AF8C208E6A9200008BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F4AF8F208E6A9200008BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				49F4AF85208E6A9200008BFD /* AppDelegate.swift */,
-				49F4AF87208E6A9200008BFD /* ViewController.swift */,
+				49F4AF87208E6A9200008BFD /* donate.swift */,
 				49F4AF89208E6A9200008BFD /* Main.storyboard */,
 				49F4AF8C208E6A9200008BFD /* Assets.xcassets */,
 				49F4AF8E208E6A9200008BFD /* LaunchScreen.storyboard */,
@@ -136,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49F4AF88208E6A9200008BFD /* ViewController.swift in Sources */,
+				49F4AF88208E6A9200008BFD /* donate.swift in Sources */,
 				49F4AF86208E6A9200008BFD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +275,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Donate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shaunseidman.Donate;
@@ -289,6 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Donate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shaunseidman.Donate;
