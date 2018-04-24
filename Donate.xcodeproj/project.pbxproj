@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49EC3786208EBA4900CC0E4A /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EC3785208EBA4900CC0E4A /* item.swift */; };
 		49F4AF86208E6A9200008BFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4AF85208E6A9200008BFD /* AppDelegate.swift */; };
 		49F4AF88208E6A9200008BFD /* donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4AF87208E6A9200008BFD /* donate.swift */; };
 		49F4AF8B208E6A9200008BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F4AF89208E6A9200008BFD /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49EC3785208EBA4900CC0E4A /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
 		49F4AF82208E6A9200008BFD /* Donate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F4AF85208E6A9200008BFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49F4AF87208E6A9200008BFD /* donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donate.swift; sourceTree = "<group>"; };
@@ -35,6 +37,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49EC3787208EBA6400CC0E4A /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				49EC3785208EBA4900CC0E4A /* item.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		49EC3788208EBA7C00CC0E4A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49F4AF87208E6A9200008BFD /* donate.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		49EC3789208EBA8800CC0E4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49F4AF89208E6A9200008BFD /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		49EC378A208EBA9000CC0E4A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				49F4AF8C208E6A9200008BFD /* Assets.xcassets */,
+				49F4AF8E208E6A9200008BFD /* LaunchScreen.storyboard */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
 		49F4AF79208E6A9200008BFD = {
 			isa = PBXGroup;
 			children = (
@@ -55,10 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				49F4AF85208E6A9200008BFD /* AppDelegate.swift */,
-				49F4AF87208E6A9200008BFD /* donate.swift */,
-				49F4AF89208E6A9200008BFD /* Main.storyboard */,
-				49F4AF8C208E6A9200008BFD /* Assets.xcassets */,
-				49F4AF8E208E6A9200008BFD /* LaunchScreen.storyboard */,
+				49EC3788208EBA7C00CC0E4A /* Controllers */,
+				49EC3787208EBA6400CC0E4A /* Data Model */,
+				49EC3789208EBA8800CC0E4A /* Views */,
+				49EC378A208EBA9000CC0E4A /* Support Files */,
 				49F4AF91208E6A9200008BFD /* Info.plist */,
 			);
 			path = Donate;
@@ -137,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49F4AF88208E6A9200008BFD /* donate.swift in Sources */,
+				49EC3786208EBA4900CC0E4A /* item.swift in Sources */,
 				49F4AF86208E6A9200008BFD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
