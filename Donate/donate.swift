@@ -11,10 +11,13 @@ import UIKit
 class donateViewController: UITableViewController {
     
     var itemArray = ["Blankets", "Cans", "Pens"]
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if let items = defaults.array(forKey: "donateArray") as? [String]{
+            itemArray = items
+        }
         
     }
 
@@ -41,6 +44,7 @@ class donateViewController: UITableViewController {
         let alert = UIAlertController(title: "Add New Item", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
             self.itemArray.append(textField.text!)
+            self.defaults.set(self.itemArray, forKey: "donateArray")
             self.tableView.reloadData()
             
         }
