@@ -8,8 +8,10 @@
 
 import UIKit
 import RealmSwift
+import SwipeCellKit
 
-class donateViewController: UITableViewController  {
+
+class donateViewController: SwipeTableViewController  {
     
     var todoItems : Results<Item>?
     let realm = try! Realm()
@@ -30,15 +32,19 @@ class donateViewController: UITableViewController  {
          return todoItems?.count ?? 1
     }
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "donateCell", for: indexPath)
+        
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        
+        
         if let item = todoItems?[indexPath.row]{
             cell.textLabel?.text = item.title
             cell.accessoryType = item.done == true ? .checkmark : .none
         } else {
             cell.textLabel?.text = "No Items Added Yet"
         }
-   
+
         return cell
     }
     
@@ -91,6 +97,18 @@ class donateViewController: UITableViewController  {
     func loadItems(){
         todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
         tableView.reloadData()
+    }
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let item = todoItems?[indexPath.row] {
+            do {
+                try realm.write{
+                    realm.delete(item)
+                }
+            } catch {
+                print("error deleting items \(error)")
+            }
+        }
     }
 }
 
