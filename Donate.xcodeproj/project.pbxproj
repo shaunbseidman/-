@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094049110BB5C5CCB6FF3210 /* Pods_Donate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7AD8ADC26411BB19AAEE4 /* Pods_Donate.framework */; };
 		499CA524208ED25000D27F7E /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 499CA522208ED25000D27F7E /* DataModel.xcdatamodeld */; };
 		49F1BC79208FC0E500483678 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F1BC78208FC0E500483678 /* CategoryViewController.swift */; };
 		49F4AF86208E6A9200008BFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4AF85208E6A9200008BFD /* AppDelegate.swift */; };
@@ -26,6 +27,9 @@
 		49F4AF8C208E6A9200008BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F4AF8F208E6A9200008BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49F4AF91208E6A9200008BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63C7AD8ADC26411BB19AAEE4 /* Pods_Donate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Donate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9462F6938D2CED68C1A4249B /* Pods-Donate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Donate/Pods-Donate.release.xcconfig"; sourceTree = "<group>"; };
+		AF50FB16229C2724D4F7AC36 /* Pods-Donate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Donate/Pods-Donate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				094049110BB5C5CCB6FF3210 /* Pods_Donate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,8 @@
 			children = (
 				49F4AF84208E6A9200008BFD /* Donate */,
 				49F4AF83208E6A9200008BFD /* Products */,
+				5994C64A980B0259306680EB /* Pods */,
+				FC39DA9EF52460BAA8CF3C27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +109,23 @@
 			path = Donate;
 			sourceTree = "<group>";
 		};
+		5994C64A980B0259306680EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF50FB16229C2724D4F7AC36 /* Pods-Donate.debug.xcconfig */,
+				9462F6938D2CED68C1A4249B /* Pods-Donate.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC39DA9EF52460BAA8CF3C27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63C7AD8ADC26411BB19AAEE4 /* Pods_Donate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49F4AF94208E6A9200008BFD /* Build configuration list for PBXNativeTarget "Donate" */;
 			buildPhases = (
+				DCB4140D06E2C23F6B2B3C0C /* [CP] Check Pods Manifest.lock */,
 				49F4AF7E208E6A9200008BFD /* Sources */,
 				49F4AF7F208E6A9200008BFD /* Frameworks */,
 				49F4AF80208E6A9200008BFD /* Resources */,
+				B1A4BCBCF66DD6F7C4FD6250 /* [CP] Embed Pods Frameworks */,
+				F55EB3F85232211545E1BA02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +195,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B1A4BCBCF66DD6F7C4FD6250 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Donate/Pods-Donate-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Donate/Pods-Donate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCB4140D06E2C23F6B2B3C0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Donate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F55EB3F85232211545E1BA02 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Donate/Pods-Donate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49F4AF7E208E6A9200008BFD /* Sources */ = {
@@ -312,6 +395,7 @@
 		};
 		49F4AF95208E6A9200008BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF50FB16229C2724D4F7AC36 /* Pods-Donate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +411,7 @@
 		};
 		49F4AF96208E6A9200008BFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9462F6938D2CED68C1A4249B /* Pods-Donate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
