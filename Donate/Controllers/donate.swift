@@ -8,13 +8,15 @@
 
 import UIKit
 import RealmSwift
-import SwipeCellKit
+//import SwipeCellKit
+import ChameleonFramework
 
 
 class donateViewController: SwipeTableViewController  {
     
     var todoItems : Results<Item>?
     let realm = try! Realm()
+    @IBOutlet weak var searchBar: UISearchBar!
     var selectedCategory : Category?{
         didSet{
             loadItems()
@@ -24,8 +26,24 @@ class donateViewController: SwipeTableViewController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        tableView.separatorStyle = .none
+  
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let colorHex = selectedCategory?.color{
+            title = selectedCategory!.name
+            guard let navBar = navigationController?.navigationBar else{fatalError("nav controller does not exist")}
+            if let navBarColor = UIColor(hexString: colorHex){
+                navBar.barTintColor = navBarColor
+                navBar.tintColor = UIColor.init(contrastingBlackOrWhiteColorOn: navBarColor, isFlat: true)
+                navBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.init(contrastingBlackOrWhiteColorOn: navBarColor, isFlat: true)]
+                searchBar.barTintColor = navBarColor
+            }
+     
+        }
+    }
+    
 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,26 +52,27 @@ class donateViewController: SwipeTableViewController  {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
-        
-        
         if let item = todoItems?[indexPath.row]{
             cell.textLabel?.text = item.title
-            cell.accessoryType = item.done == true ? .checkmark : .none
+            if let color = UIColor(hexString: selectedCategory!.color)?.darken(byPercentage:
+                CGFloat(indexPath.row) / CGFloat(todoItems!.count)){
+                cell.backgroundColor = color
+                cell.textLabel?.textColor = UIColor.white
+
+
+            }
+        cell.accessoryType = item.done == true ? .checkmark : .none
         } else {
             cell.textLabel?.text = "No Items Added Yet"
         }
-
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         if let item = todoItems?[indexPath.row]{
             do{
                 try realm.write {
-//                    realm.delete(item)
                     item.done = !item.done
                 }
             } catch {
@@ -69,7 +88,6 @@ class donateViewController: SwipeTableViewController  {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Item", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-            
             if let currentCategory = self.selectedCategory{
                 do{
                     try self.realm.write{
@@ -81,7 +99,6 @@ class donateViewController: SwipeTableViewController  {
                 } catch {
                     print("Error saving new items, \(error)")
                 }
-                
             }
             
             self.tableView.reloadData()
