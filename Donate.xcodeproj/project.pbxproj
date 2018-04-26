@@ -16,6 +16,7 @@
 		49F4AF8B208E6A9200008BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F4AF89208E6A9200008BFD /* Main.storyboard */; };
 		49F4AF8D208E6A9200008BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F4AF8C208E6A9200008BFD /* Assets.xcassets */; };
 		49F4AF90208E6A9200008BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F4AF8E208E6A9200008BFD /* LaunchScreen.storyboard */; };
+		49FD26FE209194F200CC0DE8 /* splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FD26FD209194F200CC0DE8 /* splash.swift */; };
 		DCE4E5E881CBAC9E9398914C /* Pods_Donate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9410A3618D67CA1514338D /* Pods_Donate.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		49F4AF8C208E6A9200008BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F4AF8F208E6A9200008BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49F4AF91208E6A9200008BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49FD26FD209194F200CC0DE8 /* splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splash.swift; sourceTree = "<group>"; };
 		6B9410A3618D67CA1514338D /* Pods_Donate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Donate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5EE682AC3DA02AEC7D21A6 /* Pods-Donate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Donate/Pods-Donate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 				49F1BC78208FC0E500483678 /* CategoryViewController.swift */,
 				49F4AF87208E6A9200008BFD /* donate.swift */,
 				4927209620911F2A002794B5 /* SwipeTableViewController.swift */,
+				49FD26FD209194F200CC0DE8 /* splash.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49BEB52520902CB80045D85E /* Item.swift in Sources */,
+				49FD26FE209194F200CC0DE8 /* splash.swift in Sources */,
 				49F1BC79208FC0E500483678 /* CategoryViewController.swift in Sources */,
 				49F4AF88208E6A9200008BFD /* donate.swift in Sources */,
 				49F4AF86208E6A9200008BFD /* AppDelegate.swift in Sources */,
