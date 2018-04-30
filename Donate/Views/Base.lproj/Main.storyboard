@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="b8J-NU-FVc">
+                        <searchBar key="tableHeaderView" contentMode="redraw" misplaced="YES" id="b8J-NU-FVc">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -104,13 +104,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <textField key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="PAY IT FORWARD" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="vRl-AX-sHn">
-                            <rect key="frame" x="0.0" y="181" width="375" height="71"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" id="Vs3-lK-V5x">
+                            <rect key="frame" x="0.0" y="181" width="375" height="328"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="56"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="153" id="1co-87-19c">
                                 <rect key="frame" x="0.0" y="28" width="375" height="153"/>
@@ -184,4 +181,7 @@
             <point key="canvasLocation" x="-2212" y="-244"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dog" width="562" height="359"/>
+    </resources>
 </document>
