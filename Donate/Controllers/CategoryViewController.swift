@@ -75,7 +75,7 @@ class CategoryViewController: SwipeTableViewController {
     }
     
     //MARK: - Add New Categories
-    @IBAction func AddButtonPressed(_ sender: UIBarButtonItem) {
+    @IBAction func uibarbuttonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Category", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add", style: .default) { (action) in

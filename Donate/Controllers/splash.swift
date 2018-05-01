@@ -9,7 +9,15 @@
 import Foundation
 import UIKit
 class splash: UITableViewController {
+    
+    
 
-    @IBAction func fart(_ sender: Any) {
-    }
+//    @IBAction func fart(_ sender: Any) {
+//    }
+//
+//
+//    @IBAction func Info(_ sender: Any) {
+//
+//    }
+    
 }

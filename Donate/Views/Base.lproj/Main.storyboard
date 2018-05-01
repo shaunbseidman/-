@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -81,21 +80,6 @@
             </objects>
             <point key="canvasLocation" x="-3265" y="-244"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="R4F-qB-gMn">
-            <objects>
-                <viewController id="5J3-Sb-HWq" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c7G-ia-JcE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ZEY-Hw-EyN"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xJq-TJ-xde" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3213" y="-1136"/>
-        </scene>
         <!--Table View Controller-->
         <scene sceneID="TAK-oq-CTt">
             <objects>
@@ -133,10 +117,24 @@
                                 <segue destination="8fq-GK-A1W" kind="show" id="aiX-gk-srp"/>
                             </connections>
                         </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="fjq-V5-9SR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rnF-lb-1mq">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Info"/>
+                                <connections>
+                                    <segue destination="QqX-08-sZh" kind="show" id="3fO-0y-tKx"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="info:" destination="EUt-xT-UdA" id="Bf5-Ej-FZs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T67-nf-Xfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EUt-xT-UdA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-2397.5999999999999" y="-965.6671664167917"/>
         </scene>
@@ -179,6 +177,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIz-F3-tOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2212" y="-244"/>
+        </scene>
+        <!--Splash-->
+        <scene sceneID="dFa-VI-GFq">
+            <objects>
+                <tableViewController id="QqX-08-sZh" customClass="splash" customModule="Donate" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O9S-Ny-D2Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ONx-LN-AGE">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ONx-LN-AGE" id="jrT-Nj-fPz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QqX-08-sZh" id="Grm-2X-9oE"/>
+                            <outlet property="delegate" destination="QqX-08-sZh" id="eYe-Cr-tte"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="xH2-LO-Sfu">
+                        <nil key="title"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0CT-nB-OkY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1444" y="-1270"/>
         </scene>
     </scenes>
     <resources>

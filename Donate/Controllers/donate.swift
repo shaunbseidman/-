@@ -16,6 +16,7 @@ class donateViewController: SwipeTableViewController  {
     
     var todoItems : Results<Item>?
     let realm = try! Realm()
+    
     @IBOutlet weak var searchBar: UISearchBar!
     var selectedCategory : Category?{
         didSet{
@@ -48,10 +49,19 @@ class donateViewController: SwipeTableViewController  {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          return todoItems?.count ?? 1
+        
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+//
+//        let alert = UIAlertController(title: "Alert", message: "This is an Alert", preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//        present(alert, animated: true, completion: nil)
+//
+        
+        
+        
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         if let item = todoItems?[indexPath.row]{
             cell.textLabel?.text = item.title
@@ -59,8 +69,6 @@ class donateViewController: SwipeTableViewController  {
                 CGFloat(indexPath.row) / CGFloat(todoItems!.count)){
                 cell.backgroundColor = color
                 cell.textLabel?.textColor = UIColor.white
-
-
             }
         cell.accessoryType = item.done == true ? .checkmark : .none
         } else {
@@ -70,6 +78,15 @@ class donateViewController: SwipeTableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+//        let alert = UIAlertController(title: "Do You Wish To Donate This Item?", message: "By clicking Yes, you agree to donate the specifed item. Please click No to cancel. ", preferredStyle: .alert)
+//
+//        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+//        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+//
+//        self.present(alert, animated: true)
+        
+        
         if let item = todoItems?[indexPath.row]{
             do{
                 try realm.write {
