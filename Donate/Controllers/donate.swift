@@ -53,15 +53,6 @@ class donateViewController: SwipeTableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-//
-//        let alert = UIAlertController(title: "Alert", message: "This is an Alert", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//        present(alert, animated: true, completion: nil)
-//
-        
-        
-        
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         if let item = todoItems?[indexPath.row]{
             cell.textLabel?.text = item.title
@@ -78,12 +69,12 @@ class donateViewController: SwipeTableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+//        
 //        let alert = UIAlertController(title: "Do You Wish To Donate This Item?", message: "By clicking Yes, you agree to donate the specifed item. Please click No to cancel. ", preferredStyle: .alert)
-//
+//        
 //        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
 //        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-//
+//        
 //        self.present(alert, animated: true)
         
         

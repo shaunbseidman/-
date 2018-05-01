@@ -6,18 +6,12 @@
 //  Copyright © 2018 Shaun Seidman. All rights reserved.
 //
 
-import Foundation
-import UIKit
-class splash: UITableViewController {
-    
-    
+//import Foundation
+//import UIKit
+//class splash: UITableViewController {
+//    
+//    
+//
+//
+//}
 
-//    @IBAction func fart(_ sender: Any) {
-//    }
-//
-//
-//    @IBAction func Info(_ sender: Any) {
-//
-//    }
-    
-}
