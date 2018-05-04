@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4927209720911F2A002794B5 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4927209620911F2A002794B5 /* SwipeTableViewController.swift */; };
+		494ADDAE209A6AFA00195BFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494ADDAD209A6AFA00195BFE /* Assets.xcassets */; };
 		49775FB2209277AA00D70A79 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49775FB1209277AA00D70A79 /* Media.xcassets */; };
 		49775FB42092780400D70A79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49775FB32092780400D70A79 /* Images.xcassets */; };
 		49BEB52520902CB80045D85E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BEB52420902CB80045D85E /* Item.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		371F139C709AFC4F48A3E566 /* Pods-Donate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Donate/Pods-Donate.release.xcconfig"; sourceTree = "<group>"; };
 		4927209620911F2A002794B5 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
+		494ADDAD209A6AFA00195BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49775FB1209277AA00D70A79 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		49775FB32092780400D70A79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		49BEB52420902CB80045D85E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				49775FB1209277AA00D70A79 /* Media.xcassets */,
+				494ADDAD209A6AFA00195BFE /* Assets.xcassets */,
 				49775FB32092780400D70A79 /* Images.xcassets */,
 				49F4AF85208E6A9200008BFD /* AppDelegate.swift */,
 				49EC3788208EBA7C00CC0E4A /* Controllers */,
@@ -207,6 +210,7 @@
 				49775FB42092780400D70A79 /* Images.xcassets in Resources */,
 				49F4AF8D208E6A9200008BFD /* Assets.xcassets in Resources */,
 				49775FB2209277AA00D70A79 /* Media.xcassets in Resources */,
+				494ADDAE209A6AFA00195BFE /* Assets.xcassets in Resources */,
 				49F4AF8B208E6A9200008BFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
