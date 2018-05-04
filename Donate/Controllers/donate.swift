@@ -13,7 +13,6 @@ import ChameleonFramework
 
 
 class donateViewController: SwipeTableViewController  {
-    
     var todoItems : Results<Item>?
     let realm = try! Realm()
     
