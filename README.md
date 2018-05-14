@@ -1,0 +1,1 @@
+An iOS app that makes donating easier. Local institutions are able to create a profile and upload items needed for donation. The user is then able to view the organizations and then view the posted items. A Realm database holds the data for both the organization as well as the items and executes the CRUD functionality to alert when an item has been completed or submitted.
